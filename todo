@@ -1,0 +1,7 @@
+1) upload image through pinata to ipfs
+
+2) get the URI
+
+3) create metadata with URI
+
+4) upload metadata json file to pinata
