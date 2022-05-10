@@ -1,7 +1,6 @@
-1) upload image through pinata to ipfs
-
-2) get the URI
-
-3) create metadata with URI
-
-4) upload metadata json file to pinata
+1) need function to pass local file and upload through Pinanta
+2) need to get the URI info
+3) take URI info and create a single json file with the same name as image (most likely they will be numbered)
+4) need a single function that then uploads the metadata json file up to IPFS through Pinata
+5) Need single function where I can call update function in sol file that takes TOkendID and new URI data
+that about right??

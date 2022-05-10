@@ -14,7 +14,7 @@ contract KaiECOToken721 is ERC721, ERC721Enumerable, Ownable
 
     uint256[] tokensIdscreated;
 
-    mapping (uint256 => string) idToNFTMapping;
+    mapping  (uint256 => string) public idToNFTMapping;
     mapping(string => bool) tokenURIExists;
     constructor() public
     ERC721("KaiECOToken721", "KaiECO")

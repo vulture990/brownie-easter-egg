@@ -1,6 +1,7 @@
 from brownie import KaiECOToken721, network, accounts, config, Contract
 from brownie.network.gas.strategies import GasNowStrategy
 
+
 def main():
     gas_strategy = GasNowStrategy("fast")
     # Fill your own MetaMask public key here
@@ -26,7 +27,7 @@ def main():
     # Give Zora permission to facilitate transactions with the ASK contract
     module_manager.setApprovalForModule(asks_address, True, {"from": dev})
 
-    water_collection.setApprovalForAll(erc721_helper_address, True, {"from": dev}) 
+    water_collection.setApprovalForAll(erc721_helper_address, True, {'from': dev,  "gas_limit": 20740440, "allow_revert": True}) 
     for token_id in range(3):
         price = (3- token_id) * 10 ** 16
         asksv1.createAsk(water_address, # Address of our contract
@@ -35,4 +36,8 @@ def main():
                          weth_address, # The address of the token required to pay for our NFT
                          creator_address, # The address where the funds will be sent to
                          0, # A finder reward
-                         {'from': dev}) # Sign our transaction with our account
+
+
+                        
+                         
+                         {'from': dev,  "gas_limit": 20740440, "allow_revert": True}) # Sign our transaction with our account
